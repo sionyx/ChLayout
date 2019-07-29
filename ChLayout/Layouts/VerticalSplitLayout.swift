@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIView {
-    func verticalSplitLayout(_ block: (() -> (top: UIView, bottom: UIView))) {
+
+    @discardableResult
+    public func verticalSplitLayout(_ block: (() -> (top: UIView, bottom: UIView))) -> Self {
         let pair = block()
         let top = pair.top
         top.translatesAutoresizingMaskIntoConstraints = false
@@ -27,5 +29,7 @@ extension UIView {
         bottom.leadingAnchor.constraint(equalTo: leadingAnchor, constant: bottomMargins.left).isActive = true
         bottom.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -bottomMargins.right).isActive = true
         bottom.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomMargins.bottom).isActive = true
+
+        return self
     }
 }

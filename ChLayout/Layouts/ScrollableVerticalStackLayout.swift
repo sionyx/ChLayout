@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIScrollView {
-    func scrollableVerticalStackLayout(_ block: (() -> [UIView])) {
+
+    @discardableResult
+    public func scrollableVerticalStackLayout(_ block: (() -> [UIView])) -> Self {
         let contentView = UIView(frame: CGRect.zero)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
@@ -42,5 +44,7 @@ extension UIScrollView {
             let margins = lastView.layoutMargins
             lastView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -margins.bottom).isActive = true
         }
+
+        return self
     }
 }

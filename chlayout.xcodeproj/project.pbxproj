@@ -30,6 +30,23 @@
 		77645EEF22E66D8100686AD1 /* ScrollableVerticalStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645ED322E6588500686AD1 /* ScrollableVerticalStackLayout.swift */; };
 		77645EF022E66D8100686AD1 /* FillLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645ED522E6621200686AD1 /* FillLayout.swift */; };
 		77645EF122E66D8100686AD1 /* VerticalSplitLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645ED722E6642A00686AD1 /* VerticalSplitLayout.swift */; };
+		77645EF222E672F500686AD1 /* ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645EC322E5040500686AD1 /* ChLayout.swift */; };
+		77645EF322E672F800686AD1 /* ChLayout+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645EC722E64DED00686AD1 /* ChLayout+View.swift */; };
+		77D3F1E322E8812700875F29 /* UICollectionView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E222E8812700875F29 /* UICollectionView+ChLayout.swift */; };
+		77D3F1E522E8858200875F29 /* UILabel+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E422E8858200875F29 /* UILabel+ChLayout.swift */; };
+		77D3F1E722E8861800875F29 /* UIView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E622E8861800875F29 /* UIView+ChLayout.swift */; };
+		77D3F1E822E886BA00875F29 /* UIView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E622E8861800875F29 /* UIView+ChLayout.swift */; };
+		77D3F1E922E886BD00875F29 /* UILabel+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E422E8858200875F29 /* UILabel+ChLayout.swift */; };
+		77D3F1EA22E886C600875F29 /* UICollectionView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E222E8812700875F29 /* UICollectionView+ChLayout.swift */; };
+		77D3F1EC22E88B5900875F29 /* UIScrollView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1EB22E88B5900875F29 /* UIScrollView+ChLayout.swift */; };
+		77D3F1ED22E88B5900875F29 /* UIScrollView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1EB22E88B5900875F29 /* UIScrollView+ChLayout.swift */; };
+		77D3F1EF22E88D5C00875F29 /* UIImageView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1EE22E88D5C00875F29 /* UIImageView+ChLayout.swift */; };
+		77D3F1F022E88D5C00875F29 /* UIImageView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1EE22E88D5C00875F29 /* UIImageView+ChLayout.swift */; };
+		77FB9F0722EF1B37008BAAC2 /* HorizontalSplitLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB9F0622EF1B37008BAAC2 /* HorizontalSplitLayout.swift */; };
+		77FB9F0822EF1B3C008BAAC2 /* HorizontalSplitLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB9F0622EF1B37008BAAC2 /* HorizontalSplitLayout.swift */; };
+		77FB9F0A22EF1D69008BAAC2 /* UIButton+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB9F0922EF1D69008BAAC2 /* UIButton+ChLayout.swift */; };
+		77FB9F0B22EF1D7E008BAAC2 /* UIButton+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB9F0922EF1D69008BAAC2 /* UIButton+ChLayout.swift */; };
+		77FB9F1D22EF72B0008BAAC2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 77FB9F1C22EF72B0008BAAC2 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +81,6 @@
 		77645EB522E5013500686AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77645EB722E5013900686AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77645EBA22E5013900686AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		77645EBC22E5013900686AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77645EC322E5040500686AD1 /* ChLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChLayout.swift; sourceTree = "<group>"; };
 		77645EC722E64DED00686AD1 /* ChLayout+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChLayout+View.swift"; sourceTree = "<group>"; };
 		77645ECA22E64FCF00686AD1 /* SafeAreaLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaLayout.swift; sourceTree = "<group>"; };
@@ -76,7 +92,16 @@
 		77645ED722E6642A00686AD1 /* VerticalSplitLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSplitLayout.swift; sourceTree = "<group>"; };
 		77645EDE22E66D5C00686AD1 /* ChLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77645EE022E66D5C00686AD1 /* ChLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChLayout.h; sourceTree = "<group>"; };
-		77645EE122E66D5C00686AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D3F1DD22E87EE300875F29 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D3F1DF22E87EF500875F29 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D3F1E222E8812700875F29 /* UICollectionView+ChLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ChLayout.swift"; sourceTree = "<group>"; };
+		77D3F1E422E8858200875F29 /* UILabel+ChLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ChLayout.swift"; sourceTree = "<group>"; };
+		77D3F1E622E8861800875F29 /* UIView+ChLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ChLayout.swift"; sourceTree = "<group>"; };
+		77D3F1EB22E88B5900875F29 /* UIScrollView+ChLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ChLayout.swift"; sourceTree = "<group>"; };
+		77D3F1EE22E88D5C00875F29 /* UIImageView+ChLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ChLayout.swift"; sourceTree = "<group>"; };
+		77FB9F0622EF1B37008BAAC2 /* HorizontalSplitLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSplitLayout.swift; sourceTree = "<group>"; };
+		77FB9F0922EF1D69008BAAC2 /* UIButton+ChLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+ChLayout.swift"; sourceTree = "<group>"; };
+		77FB9F1C22EF72B0008BAAC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +151,8 @@
 				77645EB422E5013500686AD1 /* Main.storyboard */,
 				77645EB722E5013900686AD1 /* Assets.xcassets */,
 				77645EB922E5013900686AD1 /* LaunchScreen.storyboard */,
-				77645EBC22E5013900686AD1 /* Info.plist */,
+				77D3F1DD22E87EE300875F29 /* Info.plist */,
+				77FB9F1C22EF72B0008BAAC2 /* README.md */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -139,6 +165,7 @@
 				77645ED322E6588500686AD1 /* ScrollableVerticalStackLayout.swift */,
 				77645ED522E6621200686AD1 /* FillLayout.swift */,
 				77645ED722E6642A00686AD1 /* VerticalSplitLayout.swift */,
+				77FB9F0622EF1B37008BAAC2 /* HorizontalSplitLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -155,13 +182,27 @@
 		77645EDF22E66D5C00686AD1 /* ChLayout */ = {
 			isa = PBXGroup;
 			children = (
+				77D3F1DF22E87EF500875F29 /* Info.plist */,
 				77645EC922E64F7900686AD1 /* Layouts */,
+				77D3F1E122E880F900875F29 /* Extensions */,
 				77645EC322E5040500686AD1 /* ChLayout.swift */,
 				77645EC722E64DED00686AD1 /* ChLayout+View.swift */,
 				77645EE022E66D5C00686AD1 /* ChLayout.h */,
-				77645EE122E66D5C00686AD1 /* Info.plist */,
 			);
 			path = ChLayout;
+			sourceTree = "<group>";
+		};
+		77D3F1E122E880F900875F29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77D3F1E222E8812700875F29 /* UICollectionView+ChLayout.swift */,
+				77D3F1E422E8858200875F29 /* UILabel+ChLayout.swift */,
+				77D3F1E622E8861800875F29 /* UIView+ChLayout.swift */,
+				77D3F1EB22E88B5900875F29 /* UIScrollView+ChLayout.swift */,
+				77D3F1EE22E88D5C00875F29 /* UIImageView+ChLayout.swift */,
+				77FB9F0922EF1D69008BAAC2 /* UIButton+ChLayout.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +300,7 @@
 			files = (
 				77645EBB22E5013900686AD1 /* LaunchScreen.storyboard in Resources */,
 				77645ED222E650E100686AD1 /* CustomView.xib in Resources */,
+				77FB9F1D22EF72B0008BAAC2 /* README.md in Resources */,
 				77645EB822E5013900686AD1 /* Assets.xcassets in Resources */,
 				77645EB622E5013500686AD1 /* Main.storyboard in Resources */,
 			);
@@ -280,11 +322,20 @@
 			files = (
 				77645ED622E6621200686AD1 /* FillLayout.swift in Sources */,
 				77645EB322E5013500686AD1 /* SecondViewController.swift in Sources */,
+				77FB9F0B22EF1D7E008BAAC2 /* UIButton+ChLayout.swift in Sources */,
+				77645EF222E672F500686AD1 /* ChLayout.swift in Sources */,
+				77D3F1EA22E886C600875F29 /* UICollectionView+ChLayout.swift in Sources */,
 				77645ED022E650CF00686AD1 /* CustomView.swift in Sources */,
+				77645EF322E672F800686AD1 /* ChLayout+View.swift in Sources */,
+				77D3F1EF22E88D5C00875F29 /* UIImageView+ChLayout.swift in Sources */,
 				77645EAF22E5013500686AD1 /* AppDelegate.swift in Sources */,
 				77645ED822E6642A00686AD1 /* VerticalSplitLayout.swift in Sources */,
 				77645ECB22E64FCF00686AD1 /* SafeAreaLayout.swift in Sources */,
 				77645ECD22E6501200686AD1 /* VerticalStackLayout.swift in Sources */,
+				77D3F1E822E886BA00875F29 /* UIView+ChLayout.swift in Sources */,
+				77FB9F0822EF1B3C008BAAC2 /* HorizontalSplitLayout.swift in Sources */,
+				77D3F1E922E886BD00875F29 /* UILabel+ChLayout.swift in Sources */,
+				77D3F1EC22E88B5900875F29 /* UIScrollView+ChLayout.swift in Sources */,
 				77645ED422E6588500686AD1 /* ScrollableVerticalStackLayout.swift in Sources */,
 				77645EB122E5013500686AD1 /* FirstViewController.swift in Sources */,
 			);
@@ -295,12 +346,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				77645EF022E66D8100686AD1 /* FillLayout.swift in Sources */,
+				77D3F1ED22E88B5900875F29 /* UIScrollView+ChLayout.swift in Sources */,
+				77FB9F0722EF1B37008BAAC2 /* HorizontalSplitLayout.swift in Sources */,
 				77645EED22E66D7700686AD1 /* SafeAreaLayout.swift in Sources */,
 				77645EEF22E66D8100686AD1 /* ScrollableVerticalStackLayout.swift in Sources */,
+				77D3F1E322E8812700875F29 /* UICollectionView+ChLayout.swift in Sources */,
+				77FB9F0A22EF1D69008BAAC2 /* UIButton+ChLayout.swift in Sources */,
 				77645EF122E66D8100686AD1 /* VerticalSplitLayout.swift in Sources */,
+				77D3F1F022E88D5C00875F29 /* UIImageView+ChLayout.swift in Sources */,
+				77D3F1E722E8861800875F29 /* UIView+ChLayout.swift in Sources */,
 				77645EEB22E66D7000686AD1 /* ChLayout.swift in Sources */,
 				77645EEE22E66D7B00686AD1 /* VerticalStackLayout.swift in Sources */,
 				77645EEC22E66D7400686AD1 /* ChLayout+View.swift in Sources */,
+				77D3F1E522E8858200875F29 /* UILabel+ChLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,12 +515,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = chlayout/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.sionyx.chlayout;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sionyx.chlayout.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,12 +534,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = chlayout/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.sionyx.chlayout;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sionyx.chlayout.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,7 +559,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ChLayout/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +588,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ChLayout/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

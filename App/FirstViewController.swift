@@ -18,37 +18,32 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         view!.safeAreaLayout {
-            UIView.ch.setup {
-                $0.backgroundColor = UIColor.yellow
-                $0.layoutMargins = .zero
-                $0.verticalSplitLayout {(
-                    top: UILabel.ch.setup {
-                        $0.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-                        $0.backgroundColor = UIColor.green
-                        $0.text = "ChLayout"
-                        $0.font = UIFont.systemFont(ofSize: 32, weight: .light)
-                    },
-                    bottom: UIScrollView.ch.setup {
-                        $0.alwaysBounceVertical = true
-                        $0.backgroundColor = UIColor.purple
-                        $0.layoutMargins = .zero
-                        $0.scrollableVerticalStackLayout {[
-                            UILabel.ch.named(&header).ch.setup {
-                                $0.text = "123"
-                                $0.textColor = UIColor.blue
-                            },
-                            UIImageView.ch.setup {
-                                $0.image = UIImage(named: "test")
-                                $0.contentMode = .scaleAspectFit
-                            },
-                            CustomView.ch.fromXibNamed(&customView).ch.setup {
-                                $0.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+            UIView.ch.create().zeroMargins().backgroundColor(.yellow).verticalSplitLayout {(
+                top: UILabel.ch.create()
+                    .text("ChLayout")
+                    .margins(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+                    .backgroundColor(.green)
+                    .font(.systemFont(ofSize: 32, weight: .light)),
+                bottom: UIScrollView.ch.create()
+                    .bounceVertical(true)
+                    .backgroundColor(.purple)
+                    .zeroMargins()
+                    .scrollableVerticalStackLayout {[
+                        UILabel.ch.create()
+                            .ch.named(&header)
+                            .text("123")
+                            .textColor(.blue),
+                        UIImageView.ch.create()
+                            .imageNamed("test")
+                            .contentMode(.scaleAspectFit),
+                        CustomView.ch.fromXib()
+                            .ch.named(&customView)
+                            .margins(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+                            .ch.setup {
                                 $0.textLabel.textColor = UIColor.darkGray
                             }
-                        ]}
-                    }
-                )}
-            }
+                    ]}
+            )}
         }
 
         print("header \(String(describing: header))")

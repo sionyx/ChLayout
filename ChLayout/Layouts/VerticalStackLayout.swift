@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIView {
-    func verticalStackLayout(_ block: (() -> [UIView])) {
+
+    @discardableResult
+    public func verticalStackLayout(_ block: (() -> [UIView])) -> Self {
         let views = block()
 
         var anchor = self.topAnchor
@@ -22,5 +24,7 @@ extension UIView {
             v.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margins.right).isActive = true
             anchor = v.bottomAnchor
         }
+
+        return self
     }
 }

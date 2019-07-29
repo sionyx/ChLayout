@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIView {
-    func fillLayout(_ block: (() -> UIView)) {
+
+    @discardableResult
+    public func fillLayout(_ block: (() -> UIView)) -> Self {
         let view = block()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
@@ -18,5 +20,23 @@ extension UIView {
         view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margins.bottom).isActive = true
         view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: margins.left).isActive = true
         view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margins.right).isActive = true
+
+        return self
+    }
+
+    public func fillLayout(_ block: (() -> [UIView])) -> Self {
+        let views = block()
+
+        for view in views {
+            view.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(view)
+            let margins = view.layoutMargins
+            view.topAnchor.constraint(equalTo: topAnchor, constant: margins.top).isActive = true
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margins.bottom).isActive = true
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: margins.left).isActive = true
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margins.right).isActive = true
+        }
+
+        return self
     }
 }
