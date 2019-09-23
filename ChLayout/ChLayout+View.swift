@@ -42,10 +42,3 @@ extension ChLayout where Base: UIView {
         return self.base
     }
 }
-
-extension UIView {
-    public func named(_ view: inout Self?) -> Self {
-        view = self
-        return self
-    }
-}
