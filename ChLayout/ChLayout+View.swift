@@ -15,12 +15,17 @@ extension ChLayout where Base: UIView {
     /// Creates View from xib
     public static func fromXib(_ xibName: String? = nil) -> Base {
         let nibName = xibName ?? String(describing: Base.self)
-        return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as! Base
+        let view = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as! Base
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layoutMargins = .zero
+        return view
     }
 
     /// Creates View
     public static func create() -> Base {
         let view = Base(frame: CGRect.zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layoutMargins = .zero
         return view
     }
 }
@@ -35,5 +40,12 @@ extension ChLayout where Base: UIView {
     public func setup(_ block: (Base) -> Void) -> Base {
         block(self.base)
         return self.base
+    }
+}
+
+extension UIView {
+    public func named(_ view: inout Self?) -> Self {
+        view = self
+        return self
     }
 }

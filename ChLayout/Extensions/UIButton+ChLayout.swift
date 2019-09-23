@@ -23,4 +23,9 @@ extension UIButton {
         setImage(image, for: state)
         return self
     }
+
+    public func imageNamed(_ name: String, state: UIControl.State = .normal) -> Self {
+        setImage(UIImage(named: name), for: state)
+        return self
+    }
 }

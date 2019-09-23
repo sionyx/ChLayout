@@ -9,11 +9,6 @@
 import UIKit
 
 extension UIView {
-    public func zeroMargins() -> Self {
-        layoutMargins = .zero
-        return self
-    }
-
     public func margins(_ margins: UIEdgeInsets) -> Self {
         layoutMargins = margins
         return self

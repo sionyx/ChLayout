@@ -18,7 +18,7 @@ github "sionyx/ChLayout"
 
 ## Examples
 
-1. Basic layout: add subview and align with safe area 
+### Basic layout: add subview and align with safe area 
 
 ```swift
 override func viewDidLoad() {
@@ -29,7 +29,7 @@ override func viewDidLoad() {
 }
 ```
 
-1. Vertically stacked array of views: 
+### Vertically stacked array of views: 
 
 ```swift
 override func viewDidLoad() {
@@ -42,7 +42,7 @@ override func viewDidLoad() {
 }
 ```
 
-1. Special vertical stack for UIScrollView:
+### Special vertical stack for UIScrollView:
 
 ```swift
 override func viewDidLoad() {
@@ -58,7 +58,7 @@ override func viewDidLoad() {
 }
 ```
 
-1. Assign views to view controller variables:
+### Assign views to view controller variables:
 
 ```swift
 var titleLabel: UILabel!
@@ -78,7 +78,7 @@ override func viewDidLoad() {
 }
 ```
 
-1. Setup basic properties:
+### Setup basic properties:
 
 ```swift
 var titleLabel: UILabel!
@@ -94,7 +94,7 @@ override func viewDidLoad() {
 }
 ```
 
-1. Setup any other propertiers: 
+### Setup any other propertiers: 
 ```swift
 var titleLabel: UILabel!
 
@@ -113,7 +113,7 @@ override func viewDidLoad() {
 }
 ```
 
-1. Use already created views of view controller:
+### Use already created views of view controller:
 
 ```swift
 var titleLabel: UILabel!
@@ -131,7 +131,7 @@ override func viewDidLoad() {
 }
 ```
 
-1. Create custom elements from xib:
+### Create custom elements from xib:
 
 ```swift
 var fancyView: MyFancyView!
@@ -164,7 +164,6 @@ override func viewDidLoad() {
 ## Layout helpers
 
 * .margins(_:) - sets specified margins to view
-* .zeroMargins() - sets zero margins to view
 * .width(_:) - sets width constraint to view
 * .height(_:) - sets height constraing to view
 
@@ -190,5 +189,6 @@ override func viewDidLoad() {
   * title
   * titleColor
   * image
+  * imageNamed
   
 
