@@ -23,4 +23,19 @@ extension UILabel {
         self.textColor = textColor
         return self
     }
+
+    public func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
+        self.textAlignment = textAlignment
+        return self
+    }
+
+    public func numberOfLines(_ numberOfLines: Int) -> Self {
+        self.numberOfLines = numberOfLines
+        return self
+    }
+
+    public func adjustsFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> Self {
+        self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+        return self
+    }
 }

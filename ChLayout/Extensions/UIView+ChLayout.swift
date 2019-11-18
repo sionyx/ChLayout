@@ -38,6 +38,19 @@ extension UIView {
         layer.borderWidth = width
         return self
     }
+
+    public func shadow(color: UIColor, opacity: Float = 1.0, offset: CGSize = CGSize(width: 1, height: 1), radius: CGFloat = 1) -> Self {
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        return self
+    }
+
+    public func clipsToBounds(_ clipsToBounds: Bool) -> Self {
+        self.clipsToBounds = clipsToBounds
+        return self
+    }
 }
 
 

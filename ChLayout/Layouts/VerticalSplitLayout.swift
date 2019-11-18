@@ -32,4 +32,9 @@ extension UIView {
 
         return self
     }
+
+    @discardableResult
+    public static func verticalSplitLayout(_ block: (() -> (top: UIView, bottom: UIView))) -> UIView {
+        return UIView.ch.create().verticalSplitLayout(block)
+    }
 }

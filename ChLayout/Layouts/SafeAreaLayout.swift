@@ -39,4 +39,14 @@ extension UIView {
 
         return self
     }
+
+    @discardableResult
+    public static func safeAreaLayout(_ block: (() -> UIView)) -> UIView {
+        return UIView.ch.create().safeAreaLayout(block)
+    }
+
+    @discardableResult
+    public static func safeAreaLayout(_ block: (() -> [UIView])) -> UIView {
+        return UIView.ch.create().safeAreaLayout(block)
+    }
 }

@@ -28,4 +28,15 @@ extension UIButton {
         setImage(UIImage(named: name), for: state)
         return self
     }
+
+    public func backgroundImage(_ image: UIImage, state: UIControl.State = .normal) -> Self {
+        setBackgroundImage(image, for: state)
+        return self
+    }
+
+    public func backgroundImageNamed(_ name: String, state: UIControl.State = .normal) -> Self {
+        setBackgroundImage(UIImage(named: name), for: state)
+        return self
+    }
+
 }

@@ -158,6 +158,8 @@ override func viewDidLoad() {
 * UIView.verticalSplitLayout - two views will be located vertically
 * UIView.horizontalSplitLayout - two views will be located next to each other
 * UIView.verticalStackLayout - child views will be located one under another
+* UIView.positionLayout - child view will be positioned to the left/center/right and to the top/center/bottom
+* UIView.floodLayout - child views will be alligned to one our two columns
 * UIScrollView.scrollableVerticalStackLayout - child view will be located into scrollable stack 
 
 
@@ -177,10 +179,15 @@ override func viewDidLoad() {
   * cornerRadius
   * borderWidth
   * borderColor (accepts UIColor, finally!)
+  * shadow
+  * clipToBounds
 * UILabel
   * text
   * font
   * textColor
+  * textAlignment
+  * numberOfLines
+  * adjustsFontSizeToFitWidth
 * UIImageView
   * image
   * imageNamed - shorten for image(UIImage(named: ))
@@ -190,5 +197,27 @@ override func viewDidLoad() {
   * titleColor
   * image
   * imageNamed
+  * backgroundImage
+  * backgroundImageNamed
+* UITextField
+  * text
+  * font
+  * textColor
+  * textAlignment
+  * placeholder
+  * placeholder(: color:)
+  * attributedPlaceholder
+  * placeholder(: color:) - specific version of attributedPlaceholder
+* UIScrollView
+  * bounceHorizontal
+  * bounceVertical
+  * horizontalScrollIndicator
+  * verticalScrollIndicator
+  * contentInset
+* UICollectionView
+  * allowsSelection
+  * contentInsetAdjustmentBehavior
+* UIActivityIndicatorView
+  * hidesWhenStopped
   
 

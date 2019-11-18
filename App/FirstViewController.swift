@@ -17,8 +17,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        view!.safeAreaLayout {
-            UIView.ch.create().zeroMargins().backgroundColor(.yellow).verticalSplitLayout {(
+        view!.fillLayout(maxWidth: 500) {
+            UIView.ch.create()
+                .backgroundColor(.yellow)
+                .verticalSplitLayout {(
                 top: UILabel.ch.create()
                     .text("ChLayout")
                     .margins(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
@@ -27,7 +29,6 @@ class FirstViewController: UIViewController {
                 bottom: UIScrollView.ch.create()
                     .bounceVertical(true)
                     .backgroundColor(.purple)
-                    .zeroMargins()
                     .scrollableVerticalStackLayout {[
                         UILabel.ch.create()
                             .ch.named(&header)

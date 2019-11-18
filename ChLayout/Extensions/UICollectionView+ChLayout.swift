@@ -13,4 +13,17 @@ extension ChLayout where Base: UICollectionView {
         let view = Base(frame: CGRect.zero, collectionViewLayout: layout)
         return view
     }
+
+}
+
+extension UICollectionView {
+    public func allowsSelection(_ allowsSelection: Bool) -> Self {
+        self.allowsSelection = allowsSelection
+        return self
+    }
+
+    public func contentInsetAdjustmentBehavior(_ contentInsetAdjustmentBehavior: UIScrollView.ContentInsetAdjustmentBehavior) -> Self {
+        self.contentInsetAdjustmentBehavior = contentInsetAdjustmentBehavior
+        return self
+    }
 }

@@ -48,3 +48,10 @@ extension UIScrollView {
         return self
     }
 }
+
+extension UIView {
+    @discardableResult
+    public static func scrollableVerticalStackLayout(_ block: (() -> [UIView])) -> UIScrollView {
+        return UIScrollView.ch.create().scrollableVerticalStackLayout(block)
+    }
+}
