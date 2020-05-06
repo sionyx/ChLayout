@@ -19,6 +19,11 @@ extension UIButton {
         return self
     }
 
+    public func titleFont(_ font: UIFont) -> Self {
+        self.titleLabel?.font = font
+        return self
+    }
+
     public func image(_ image: UIImage, state: UIControl.State = .normal) -> Self {
         setImage(image, for: state)
         return self
@@ -39,4 +44,18 @@ extension UIButton {
         return self
     }
 
+    public func contentEdgeInsets(_ contentEdgeInsets: UIEdgeInsets) -> Self {
+        self.contentEdgeInsets = contentEdgeInsets
+        return self
+    }
+
+    public func titleEdgeInsets(_ titleEdgeInsets: UIEdgeInsets) -> Self {
+        self.titleEdgeInsets = titleEdgeInsets
+        return self
+    }
+
+    public func imageEdgeInsets(_ imageEdgeInsets: UIEdgeInsets) -> Self {
+        self.imageEdgeInsets = imageEdgeInsets
+        return self
+    }
 }

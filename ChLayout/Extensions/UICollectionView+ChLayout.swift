@@ -21,9 +21,4 @@ extension UICollectionView {
         self.allowsSelection = allowsSelection
         return self
     }
-
-    public func contentInsetAdjustmentBehavior(_ contentInsetAdjustmentBehavior: UIScrollView.ContentInsetAdjustmentBehavior) -> Self {
-        self.contentInsetAdjustmentBehavior = contentInsetAdjustmentBehavior
-        return self
-    }
 }

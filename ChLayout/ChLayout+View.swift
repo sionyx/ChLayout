@@ -41,4 +41,27 @@ extension ChLayout where Base: UIView {
         block(self.base)
         return self.base
     }
+
+    public func addSubview(_ view: UIView) -> Self {
+        self.base.addSubview(view)
+        return self
+    }
+
+    public func addSubview(_ viewBlock: () -> UIView) -> Self {
+        let view = viewBlock()
+        self.base.addSubview(view)
+        return self
+    }
+
+    public func insertSubview(_ view: UIView, at position: Int) -> Self {
+        self.base.insertSubview(view, at: position)
+        return self
+    }
+
+    public func insertSubview(at position: Int, viewBlock: () -> UIView) -> Self {
+        let view = viewBlock()
+        self.base.insertSubview(view, at: position)
+        return self
+    }
 }
+

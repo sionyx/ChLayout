@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772A99042461E73200CCB5A0 /* UITableView+ChLayount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A99032461E73200CCB5A0 /* UITableView+ChLayount.swift */; };
+		772A99062461E82800CCB5A0 /* UIRefreshControl+ChLayount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A99052461E82800CCB5A0 /* UIRefreshControl+ChLayount.swift */; };
 		7741871223829B9F001473E7 /* UIActivityIndicatorView+ChLayount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741871123829B9F001473E7 /* UIActivityIndicatorView+ChLayount.swift */; };
 		7741871323829F8E001473E7 /* UICollectionView+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E222E8812700875F29 /* UICollectionView+ChLayout.swift */; };
 		7741871423829F91001473E7 /* UILabel+ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3F1E422E8858200875F29 /* UILabel+ChLayout.swift */; };
@@ -83,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		772A99032461E73200CCB5A0 /* UITableView+ChLayount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ChLayount.swift"; sourceTree = "<group>"; };
+		772A99052461E82800CCB5A0 /* UIRefreshControl+ChLayount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+ChLayount.swift"; sourceTree = "<group>"; };
 		7741871123829B9F001473E7 /* UIActivityIndicatorView+ChLayount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+ChLayount.swift"; sourceTree = "<group>"; };
 		77645EAB22E5013500686AD1 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77645EAE22E5013500686AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				77FB9F0922EF1D69008BAAC2 /* UIButton+ChLayout.swift */,
 				77B495FE234642BB006C72FD /* UITextField+ChLayout.swift */,
 				7741871123829B9F001473E7 /* UIActivityIndicatorView+ChLayount.swift */,
+				772A99032461E73200CCB5A0 /* UITableView+ChLayount.swift */,
+				772A99052461E82800CCB5A0 /* UIRefreshControl+ChLayount.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,12 +382,14 @@
 				77645EEF22E66D8100686AD1 /* ScrollableVerticalStackLayout.swift in Sources */,
 				77D3F1E322E8812700875F29 /* UICollectionView+ChLayout.swift in Sources */,
 				77FB9F0A22EF1D69008BAAC2 /* UIButton+ChLayout.swift in Sources */,
+				772A99042461E73200CCB5A0 /* UITableView+ChLayount.swift in Sources */,
 				77B495FF234642BB006C72FD /* UITextField+ChLayout.swift in Sources */,
 				77645EF122E66D8100686AD1 /* VerticalSplitLayout.swift in Sources */,
 				77D3F1F022E88D5C00875F29 /* UIImageView+ChLayout.swift in Sources */,
 				77D3F1E722E8861800875F29 /* UIView+ChLayout.swift in Sources */,
 				7741871223829B9F001473E7 /* UIActivityIndicatorView+ChLayount.swift in Sources */,
 				77645EEB22E66D7000686AD1 /* ChLayout.swift in Sources */,
+				772A99062461E82800CCB5A0 /* UIRefreshControl+ChLayount.swift in Sources */,
 				77645EEE22E66D7B00686AD1 /* VerticalStackLayout.swift in Sources */,
 				77645EEC22E66D7400686AD1 /* ChLayout+View.swift in Sources */,
 				77D3F1E522E8858200875F29 /* UILabel+ChLayout.swift in Sources */,
@@ -593,6 +601,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sionyx.ChLayout;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -622,6 +631,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sionyx.ChLayout;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

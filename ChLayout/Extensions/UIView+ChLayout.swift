@@ -39,6 +39,7 @@ extension UIView {
         return self
     }
 
+    @discardableResult
     public func shadow(color: UIColor, opacity: Float = 1.0, offset: CGSize = CGSize(width: 1, height: 1), radius: CGFloat = 1) -> Self {
         layer.shadowColor = color.cgColor
         layer.shadowOpacity = opacity
@@ -51,17 +52,49 @@ extension UIView {
         self.clipsToBounds = clipsToBounds
         return self
     }
+
+    public func hidden(_ isHidden: Bool) -> Self {
+        self.isHidden = isHidden
+        return self
+    }
+
+    public func alpha(_ alpha: CGFloat) -> Self {
+        self.alpha = alpha
+        return self
+    }
 }
 
 
 extension UIView {
+    @discardableResult
     public func height(_ height: CGFloat) -> Self {
         heightAnchor.constraint(equalToConstant: height).isActive = true
         return self
     }
 
+    @discardableResult
     public func width(_ width: CGFloat) -> Self {
         widthAnchor.constraint(equalToConstant: width).isActive = true
+        return self
+    }
+
+    public func contentHuggingPriority(_ priority: UILayoutPriority, for axis: NSLayoutConstraint.Axis) -> UIView {
+        self.setContentHuggingPriority(priority, for: axis)
+        return self
+    }
+
+    public func contentHuggingPriority(_ priorityValue: Float, for axis: NSLayoutConstraint.Axis) -> UIView {
+        self.setContentHuggingPriority(UILayoutPriority(rawValue: priorityValue), for: axis)
+        return self
+    }
+
+    public func horizontalContentHuggingPriority(_ priorityValue: Float) -> UIView {
+        self.setContentHuggingPriority(UILayoutPriority(rawValue: priorityValue), for: .horizontal)
+        return self
+    }
+
+    public func verticalContentHuggingPriority(_ priorityValue: Float) -> UIView {
+        self.setContentHuggingPriority(UILayoutPriority(rawValue: priorityValue), for: .vertical)
         return self
     }
 }

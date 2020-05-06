@@ -9,6 +9,16 @@
 import UIKit
 
 extension UIActivityIndicatorView {
+    public func color(_ color: UIColor) -> Self {
+        self.color = color
+        return self
+    }
+
+    public func style(_ style: UIActivityIndicatorView.Style) -> Self {
+        self.style = style
+        return self
+    }
+
     public func hidesWhenStopped(_ hidesWhenStopped: Bool) -> Self {
         self.hidesWhenStopped = hidesWhenStopped
         return self

@@ -94,7 +94,7 @@ override func viewDidLoad() {
 }
 ```
 
-### Setup any other propertiers: 
+### Setup any other properties: 
 ```swift
 var titleLabel: UILabel!
 
@@ -107,11 +107,29 @@ override func viewDidLoad() {
             .textColor(.blue)
             .ch.setup {
                 $0.layer.borderWidth = 1
-                $0.layer.cornerRadisu = 8
+                $0.layer.cornerRadius = 8
             }
     }
 }
 ```
+
+### Setup any other properties inline:
+
+```swift
+var titleLabel: UILabel!
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    view.safeAreaLayout {
+        UILabel.ch.create()
+            .ch.named(&titleLabel)
+            .ch.set(\.text, "ChLayout")
+            .ch.set(\.backgroundColor, .blue)
+            .ch.set(\.layer.borderWidth, 1)
+    }
+}
+```
+Note: Avoid using .ch.set() for properties that already have methods in ChLayout 
 
 ### Use already created views of view controller:
 
@@ -150,6 +168,36 @@ override func viewDidLoad() {
 }
 ```
 
+### Call method by block inline: 
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    view.safeAreaLayout {
+        UILabel.ch.create()
+            .ch.exec(\.myConfigureFont)
+    }
+}
+
+extension UILabel {
+    var myConfigureFont: (() -> Void) {
+        return _myConfigureFont
+    }
+
+    private func _myConfigureFont() {
+        font = UIFont.systemFont(ofSize: 24)
+    }
+}
+```
+
+Note: Same method perform() can be used for NSObject based classes:
+
+```swift
+// Call to sizeToFit is shown only as demonstration of perform syntax!
+UILabel.ch.create()
+    .ch.perform(#selector(UIView.sizeToFit))
+```
 
 ## Layouts
 
@@ -181,6 +229,11 @@ override func viewDidLoad() {
   * borderColor (accepts UIColor, finally!)
   * shadow
   * clipToBounds
+  * hidden
+  * alpha
+  * contentHuggingPriority
+  * horizontalContentHuggingPriority
+  * verticalContentHuggingPriority
 * UILabel
   * text
   * font
@@ -188,6 +241,7 @@ override func viewDidLoad() {
   * textAlignment
   * numberOfLines
   * adjustsFontSizeToFitWidth
+  * minimumScaleFactor
 * UIImageView
   * image
   * imageNamed - shorten for image(UIImage(named: ))
@@ -195,10 +249,14 @@ override func viewDidLoad() {
 * UIButton
   * title
   * titleColor
+  * titleFont
   * image
   * imageNamed
   * backgroundImage
   * backgroundImageNamed
+  * contentEdgeInsets
+  * titleEdgeInsets
+  * imageEdgeInsets
 * UITextField
   * text
   * font
@@ -214,10 +272,25 @@ override func viewDidLoad() {
   * horizontalScrollIndicator
   * verticalScrollIndicator
   * contentInset
+  * contentInsetAdjustmentBehavior
 * UICollectionView
   * allowsSelection
-  * contentInsetAdjustmentBehavior
+* UITableView
+  * allowsSelection
+  * separatorStyle
+  * separatorColor
 * UIActivityIndicatorView
+  * color
+  * style
   * hidesWhenStopped
+* UIRefreshControl
+  * tintColor
+  * attributedTitle
   
-
+  ## Inline helpers:
+  .addSubview -- inline method to add subview
+  .insertSubview -- inline method to insert subview
+  .ch.setup -- inline access to object
+  .ch.set -- inline method to set property by keypath
+  .ch.exec -- inline method to call block property by keypath
+  ch.perform -- inline method to perform selector for classes based on NSObject 

@@ -20,7 +20,7 @@ class FloodContainer: UIView {
     private var verticalConstraints: [NSLayoutConstraint] = []
     private var horizontalConstraints: [NSLayoutConstraint] = []
 
-    func containerFloodLayout(_ block: (() -> [UIView])) {
+    func containerFloodLayout(equalWidth: Bool, _ block: (() -> [UIView])) {
         let views = block()
 
         if container1 != nil {
@@ -67,23 +67,28 @@ class FloodContainer: UIView {
 
         horizontalConstraints = [ container2.topAnchor.constraint(equalTo: topAnchor),
                                   container1.bottomAnchor.constraint(equalTo: bottomAnchor),
-                                  container1.trailingAnchor.constraint(equalTo: container2.leadingAnchor),
-                                  container1.widthAnchor.constraint(equalTo: container2.widthAnchor) ]
+                                  container1.trailingAnchor.constraint(equalTo: container2.leadingAnchor) ]
+
+        if equalWidth {
+            horizontalConstraints.append(container1.widthAnchor.constraint(equalTo: container2.widthAnchor))
+        }
 
     }
 
     private func fullfill(container: UIView, with subviews: [UIView]) {
         var anchor = container.topAnchor
+        var lastMargin: CGFloat = 0
         for v in subviews {
             v.translatesAutoresizingMaskIntoConstraints = false
             container.addSubview(v)
             let margins = v.layoutMargins
-            v.topAnchor.constraint(equalTo: anchor, constant: margins.top).isActive = true
+            v.topAnchor.constraint(equalTo: anchor, constant: margins.top + lastMargin).isActive = true
             v.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: margins.left).isActive = true
             v.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -margins.right).isActive = true
+            lastMargin = margins.bottom
             anchor = v.bottomAnchor
         }
-        anchor.constraint(equalTo: container.bottomAnchor).isActive = true
+        anchor.constraint(equalTo: container.bottomAnchor, constant: -lastMargin).isActive = true
     }
 
     override func updateConstraints() {
@@ -118,7 +123,7 @@ class FloodContainer: UIView {
 extension UIView {
 
     @discardableResult
-    public func floodLayout(baseWidth: CGFloat, block: (() -> [UIView])) -> Self {
+    public func floodLayout(baseWidth: CGFloat, equalWidth: Bool = true, block: (() -> [UIView])) -> Self {
         let floodView = FloodContainer(frame: bounds)
         floodView.baseWidth = baseWidth
         floodView.translatesAutoresizingMaskIntoConstraints = false
@@ -131,18 +136,18 @@ extension UIView {
         floodView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         floodView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 
-        floodView.containerFloodLayout(block)
+        floodView.containerFloodLayout(equalWidth: equalWidth, block)
 
         return self
     }
 
     @discardableResult
-    public static func floodLayout(baseWidth: CGFloat, block: (() -> [UIView])) -> UIView {
+    public static func floodLayout(baseWidth: CGFloat, equalWidth: Bool = true, block: (() -> [UIView])) -> UIView {
         let floodView = FloodContainer(frame: .zero)
         floodView.baseWidth = baseWidth
         floodView.backgroundColor = .clear
 
-        floodView.containerFloodLayout(block)
+        floodView.containerFloodLayout(equalWidth: equalWidth, block)
 
         return floodView
     }
