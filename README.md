@@ -287,10 +287,10 @@ UILabel.ch.create()
   * tintColor
   * attributedTitle
   
-  ## Inline helpers:
-  .addSubview -- inline method to add subview
-  .insertSubview -- inline method to insert subview
-  .ch.setup -- inline access to object
-  .ch.set -- inline method to set property by keypath
-  .ch.exec -- inline method to call block property by keypath
-  ch.perform -- inline method to perform selector for classes based on NSObject 
+## Inline helpers:
+* .addSubview - inline method to add subview
+* .insertSubview - inline method to insert subview
+* .ch.setup - inline access to object
+* .ch.set - inline method to set property by keypath
+* .ch.exec - inline method to call block property by keypath
+* .ch.perform - inline method to perform selector for classes based on NSObject 
