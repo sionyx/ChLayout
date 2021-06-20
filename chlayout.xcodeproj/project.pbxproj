@@ -38,6 +38,7 @@
 		77645EF122E66D8100686AD1 /* VerticalSplitLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645ED722E6642A00686AD1 /* VerticalSplitLayout.swift */; };
 		77645EF222E672F500686AD1 /* ChLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645EC322E5040500686AD1 /* ChLayout.swift */; };
 		77645EF322E672F800686AD1 /* ChLayout+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77645EC722E64DED00686AD1 /* ChLayout+View.swift */; };
+		7780C8CD267FF18B0065BFF4 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780C8CC267FF18B0065BFF4 /* Package.swift */; };
 		77B495E3233CB291006C72FD /* PositionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B495E2233CB291006C72FD /* PositionLayout.swift */; };
 		77B495E4233CB298006C72FD /* PositionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B495E2233CB291006C72FD /* PositionLayout.swift */; };
 		77B495F0233F3698006C72FD /* FloodLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B495EF233F3698006C72FD /* FloodLayout.swift */; };
@@ -106,6 +107,7 @@
 		77645ED722E6642A00686AD1 /* VerticalSplitLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSplitLayout.swift; sourceTree = "<group>"; };
 		77645EDE22E66D5C00686AD1 /* ChLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77645EE022E66D5C00686AD1 /* ChLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChLayout.h; sourceTree = "<group>"; };
+		7780C8CC267FF18B0065BFF4 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		77B495E2233CB291006C72FD /* PositionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionLayout.swift; sourceTree = "<group>"; };
 		77B495EF233F3698006C72FD /* FloodLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodLayout.swift; sourceTree = "<group>"; };
 		77B495F2233F374B006C72FD /* FloodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		77645EA222E5013500686AD1 = {
 			isa = PBXGroup;
 			children = (
+				7780C8CC267FF18B0065BFF4 /* Package.swift */,
 				77645EAD22E5013500686AD1 /* App */,
 				77645EDF22E66D5C00686AD1 /* ChLayout */,
 				77645EAC22E5013500686AD1 /* Products */,
@@ -357,6 +360,7 @@
 				77D3F1EF22E88D5C00875F29 /* UIImageView+ChLayout.swift in Sources */,
 				77645EAF22E5013500686AD1 /* AppDelegate.swift in Sources */,
 				77B495E4233CB298006C72FD /* PositionLayout.swift in Sources */,
+				7780C8CD267FF18B0065BFF4 /* Package.swift in Sources */,
 				77645ED822E6642A00686AD1 /* VerticalSplitLayout.swift in Sources */,
 				77645ECB22E64FCF00686AD1 /* SafeAreaLayout.swift in Sources */,
 				77645ECD22E6501200686AD1 /* VerticalStackLayout.swift in Sources */,
